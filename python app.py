@@ -24,6 +24,7 @@ def bot():
     else:
         msg.body("Mujhe samajh nahi aaya 😅\nTry typing 'help' or 'hi'.")
 
+
     return str(reply)
 
 if __name__ == "__main__":
@@ -38,4 +39,14 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Hello, WhatsApp Bot is Running!"
+
+if __name__ == "__main__":
+    app.run()
 
